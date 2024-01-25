@@ -18,10 +18,10 @@ export class HomeComponent implements OnInit {
   }
 
 
-  llenarDataCharacter() {
+  llenarDataCharacter() { 
     this.apiService.getCharacters().subscribe( data => {
       this.characters = data;
-      console.log('this.getCharacters', this.characters);
+      console.log('HOME: this.getCharacters', this.characters);
     })
   }
 
@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
   llenarDataAllCharacter() {
     this.apiService.getAllCharacters().subscribe(data => {
       this.allCharacters = data;
-      console.log('this.getAllCharacters', this.allCharacters);
+      console.log('HOME: this.getAllCharacters', this.allCharacters);
     })
   }
 
