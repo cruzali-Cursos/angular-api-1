@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
   llenarDataCharacter() {
     this.apiService.getCharacters().subscribe( data => {
       this.characters = data;
-      console.log(this.characters);
+      console.log('this.getCharacters', this.characters);
     })
   }
 
@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
   llenarDataAllCharacter() {
     this.apiService.getAllCharacters().subscribe(data => {
       this.allCharacters = data;
-      console.log(this.allCharacters);
+      console.log('this.getAllCharacters', this.allCharacters);
     })
   }
 
