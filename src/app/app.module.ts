@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { PagesComponent } from './pages/pages.component';
+import { GestionRoutingModule } from './pages/gestion/gestion-routing.module';
 
 
 
@@ -17,7 +18,8 @@ import { PagesComponent } from './pages/pages.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    GestionRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
