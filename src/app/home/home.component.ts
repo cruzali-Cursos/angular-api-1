@@ -8,21 +8,31 @@ import { ApiService } from '../service/api.service';
 })
 export class HomeComponent implements OnInit {
 
-  data: any[] = [];
+  characters: any[] = [];
 
   constructor(private apiService: ApiService) {}
 
   ngOnInit(): void {
-    this.llenarData();    
+    this.llenarDataCharacter();
+    this.llenarDataAllCharacter();
   }
 
 
-  llenarData() {
-    this.apiService.getData().subscribe( data => {
-      this.data = data;
-      console.log(this.data);
+  llenarDataCharacter() {
+    this.apiService.getCharacters().subscribe( data => {
+      this.characters = data;
+      console.log(this.characters);
     })
-
   }
+
+  allCharacters: any[] = [];
+
+  llenarDataAllCharacter() {
+    this.apiService.getAllCharacters().subscribe(data => {
+      this.allCharacters = data;
+      console.log(this.allCharacters);
+    })
+  }
+
 
 }

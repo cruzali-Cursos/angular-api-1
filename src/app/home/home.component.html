@@ -1,9 +1,18 @@
 <div>
     <h2>Data API Demo</h2>
     <ul>
-        <li *ngFor="let item of data">
+        <li *ngFor="let item of characters">
             {{ item.id }}
             <span>{{item.name}}</span>
+        </li>
+    </ul>
+
+
+    <h2>All Character</h2>
+    <ul>
+        <li *ngFor="let item of allCharacters">
+            {{ item.id }}
+            <span>{{ item.name }}</span>
         </li>
     </ul>
 </div>
