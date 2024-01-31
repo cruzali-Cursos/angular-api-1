@@ -8,6 +8,7 @@ import { PagesComponent } from './pages/pages.component';
 import { GestionRoutingModule } from './pages/gestion/gestion-routing.module';
 import { CommonModule } from '@angular/common';
 import { NgFor } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -23,7 +24,8 @@ import { NgFor } from '@angular/common';
     HttpClientModule,
     GestionRoutingModule,
     CommonModule,
-    NgFor
+    NgFor,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
